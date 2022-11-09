@@ -1,32 +1,32 @@
-import { Disclosure } from '@headlessui/react'
-import { MenuIcon, XIcon } from '@heroicons/react/outline'
-import LogoNav from '../assets/logo.svg'
-import { Link, useLocation, useNavigate } from 'react-router-dom'
-import { scroller } from 'react-scroll'
+import { Disclosure } from "@headlessui/react";
+import { MenuIcon, XIcon } from "@heroicons/react/outline";
+import LogoNav from "../assets/logo.svg";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { scroller } from "react-scroll";
 const navigation = [
-  { name: 'HOME', href: '/', current: false },
-  { name: 'TEAM', href: '/ourteam', current: false },
-  { name: 'PAST EVENTS', href: '/events', current: false },
-  { name: 'INFINITY 2k22', href: '/infinity', current: false },
-  { name: 'HALL OF FAME', href: '/halloffame', current: false },
-]
+  { name: "HOME", href: "/", current: false },
+  { name: "TEAM", href: "/ourteam", current: false },
+  { name: "PAST EVENTS", href: "/events", current: false },
+  { name: "INFINITY 2k22", href: "/infinity", current: false },
+  { name: "HALL OF FAME", href: "/halloffame", current: false },
+];
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(" ");
 }
 function NavBar() {
-  const { pathname } = useLocation()
-  let navigate = useNavigate()
+  const { pathname } = useLocation();
+  let navigate = useNavigate();
   const onRegisterNow = () => {
-    if (pathname !== '/') {
-      navigate('/#registration')
+    if (pathname !== "/infinity") {
+      navigate("/infinity");
     } else {
-      scroller.scrollTo('registration', {
+      scroller.scrollTo("registration", {
         duration: 1000,
         smooth: true,
         offset: -20,
-      })
+      });
     }
-  }
+  };
   return (
     <Disclosure as="nav" className="top-nav">
       {({ open }) => (
@@ -34,7 +34,7 @@ function NavBar() {
           <div className=" mx-auto px-2   ">
             <div
               className="relative flex items-center justify-start sm:justify-around h-16"
-              style={{ padding: '0 1em' }}
+              style={{ padding: "0 1em" }}
             >
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
@@ -49,7 +49,7 @@ function NavBar() {
               </div>
               <div
                 className="flex items-center justify-center sm:items-stretch sm:justify-start ml-16 sm:ml-0"
-                style={{ marginRight: 'auto' }}
+                style={{ marginRight: "auto" }}
               >
                 <div>
                   <Link to="/" className="company-text-logo">
@@ -72,9 +72,9 @@ function NavBar() {
                         key={item.name}
                         to={item.href}
                         className={classNames(
-                          ' text-gray-200 text-xs md:px-3 py-2 border-transparent md:text-sm font-bold font-montserrat tracking-wide transition duration-300 ease-in-out hover:text-pink-squid border-b hover:border-pink-squid'
+                          " text-gray-200 text-xs md:px-3 py-2 border-transparent md:text-sm font-bold font-montserrat tracking-wide transition duration-300 ease-in-out hover:text-pink-squid border-b hover:border-pink-squid"
                         )}
-                        aria-current={item.current ? 'page' : undefined}
+                        aria-current={item.current ? "page" : undefined}
                       >
                         {item.name}
                       </Link>
@@ -84,13 +84,13 @@ function NavBar() {
               </div>
               <div
                 className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
-                style={{ marginLeft: 'auto' }}
+                style={{ marginLeft: "auto" }}
               >
                 <div
                   onClick={onRegisterNow}
                   className="bg-pink-squid select-none text-[#202833] font-montserrat font-semibold rounded-lg cursor-pointer focus:outline-none p-2"
                 >
-                  CONTACT US
+                  REGISTER NOW
                 </div>
               </div>
             </div>
@@ -104,11 +104,11 @@ function NavBar() {
                     key={item.name}
                     className={classNames(
                       item.current
-                        ? 'bg-gray-900 text-white'
-                        : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                      'block px-3 py-2 rounded-md text-base font-medium'
+                        ? "bg-gray-900 text-white"
+                        : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                      "block px-3 py-2 rounded-md text-base font-medium"
                     )}
-                    aria-current={item.current ? 'page' : undefined}
+                    aria-current={item.current ? "page" : undefined}
                   >
                     {item.name}
                   </Disclosure.Button>
@@ -119,7 +119,7 @@ function NavBar() {
         </div>
       )}
     </Disclosure>
-  )
+  );
 }
 
-export default NavBar
+export default NavBar;

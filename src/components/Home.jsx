@@ -1,9 +1,9 @@
-import { CalendarIcon, ClockIcon } from '@heroicons/react/solid'
-import { motion } from 'framer-motion'
-import Countdown from 'react-countdown'
-import infinityText from '../assets/infinity-text.svg'
-import Registration from './Registration'
-import Team from './Team'
+import { CalendarIcon, ClockIcon } from "@heroicons/react/solid";
+import { motion } from "framer-motion";
+import Countdown from "react-countdown";
+import infinityText from "../assets/infinity-text.svg";
+import Registration from "./Registration";
+import Team from "./Team";
 function Home() {
   const renderer = ({ days, hours, minutes, seconds, completed }) => {
     if (completed) {
@@ -12,7 +12,7 @@ function Home() {
         <div className="bg-pink-squid px-5 py-1 rounded-lg font-bold text-center">
           LIVE NOW
         </div>
-      )
+      );
     } else {
       // Render a countdown
       return (
@@ -23,7 +23,7 @@ function Home() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{
-                ease: 'easeOut',
+                ease: "easeOut",
                 duration: 1,
               }}
             >
@@ -40,7 +40,7 @@ function Home() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{
-                ease: 'easeOut',
+                ease: "easeOut",
                 duration: 1,
               }}
             >
@@ -49,7 +49,7 @@ function Home() {
             <div className="text-black text-xs font-mono tracking-tighter uppercase">
               HOURS
             </div>
-          </div>{' '}
+          </div>{" "}
           :
           <div className="flex flex-col items-center">
             <motion.div
@@ -57,12 +57,12 @@ function Home() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{
-                ease: 'easeOut',
+                ease: "easeOut",
                 duration: 1,
               }}
             >
               {minutes}
-            </motion.div>{' '}
+            </motion.div>{" "}
             <div className="text-black text-xs font-mono tracking-tighter uppercase">
               MINS
             </div>
@@ -74,20 +74,20 @@ function Home() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{
-                ease: 'easeOut',
+                ease: "easeOut",
                 duration: 1,
               }}
             >
               {seconds}
-            </motion.div>{' '}
+            </motion.div>{" "}
             <div className="text-black text-xs font-mono tracking-tighter uppercase">
               SECS
             </div>
           </div>
         </div>
-      )
+      );
     }
-  }
+  };
   return (
     <div className="text-white w-full  min-h-[90vh]  flex flex-col p-5">
       <div className="flex items-center justify-center w-full mt-16 md:mt-0">
@@ -97,7 +97,7 @@ function Home() {
         />
       </div>
       <div className="font-montserrat font-bold tracking-widest antialiased w-full text-center text-xl mt-20 md:mt-4">
-        HOSTED ON{' '}
+        HOSTED ON{" "}
         <span className="text-pink-squid font-extrabold">CODECHEF</span>
       </div>
       <div className="font-montserrat font-medium tracking-wide antialiased w-full text-xl mt-5 md:mt-2 flex flex-row  items-center justify-center">
@@ -113,13 +113,13 @@ function Home() {
       </div>
       <h1
         className="font-Aquire text-pink-squid py-12"
-        style={{ fontSize: '3rem', textAlign: 'center' }}
+        style={{ fontSize: "3rem", textAlign: "center" }}
       >
         ABOUT THE CONTEST
       </h1>
       <div
         className="text-white font-montserrat text-[18px]"
-        style={{ width: '90%', margin: '0 auto' }}
+        style={{ width: "90%", margin: "0 auto" }}
       >
         InfInITy is IIIT Pune's annual flagship coding contest hosted every year
         on Codechef. A 3 hour coding contest that's guaranteed to get your head
@@ -131,7 +131,7 @@ function Home() {
       <Registration />
       <Team />
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;

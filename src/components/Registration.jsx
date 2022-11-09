@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState } from "react";
 import {
   AcademicCapIcon,
   GlobeIcon,
@@ -6,52 +6,53 @@ import {
   PhoneIcon,
   VolumeOffIcon,
   VolumeUpIcon,
-} from '@heroicons/react/outline'
-import CodechefIcon from '../assets/codechef-icon.svg'
-import { countryList } from '../assets/Countries'
-import loader from '../assets/loading.svg'
-import database from '../utils/supabase'
+} from "@heroicons/react/outline";
+import CodechefIcon from "../assets/codechef-icon.svg";
+import { countryList } from "../assets/Countries";
+import loader from "../assets/loading.svg";
+import database from "../utils/supabase";
 
-function Registration({ SetisSuccessfull, referalId }) {
-  const [ismuted, Setismuted] = useState(true)
-  const [isLoading, SetisLoading] = useState(false)
+function Registration({}) {
+  const [ismuted, Setismuted] = useState(true);
+  const [isLoading, SetisLoading] = useState(false);
+  const [isSuccessfull, SetisSuccessful] = useState(false);
   const [formDetails, SetformDetails] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    username: '',
-    country: '',
-    university: '',
-  })
+    firstName: "",
+    lastName: "",
+    email: "",
+    username: "",
+    country: "",
+    university: "",
+  });
   const [error, Seterror] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    username: '',
-    country: '',
-    university: '',
-  })
+    firstName: "",
+    lastName: "",
+    email: "",
+    username: "",
+    country: "",
+    university: "",
+  });
 
   const handleSubmit = async (event) => {
-    event.preventDefault()
-    let flag = true
+    event.preventDefault();
+    let flag = true;
     Object.values(error).forEach((obj) => {
-      if (obj !== '') {
-        flag = false
-        return
+      if (obj !== "") {
+        flag = false;
+        return;
       }
-    })
+    });
     Object.values(formDetails).forEach((obj) => {
-      if (obj === '') {
-        flag = false
-        return
+      if (obj === "") {
+        flag = false;
+        return;
       }
-    })
-    if (!flag) return
-    SetisLoading(true)
+    });
+    if (!flag) return;
+    SetisLoading(true);
     const { firstName, lastName, email, username, country, university } =
-      formDetails
-    const { error: err } = await database.from('registrations').insert({
+      formDetails;
+    const { error: err } = await database.from("registrations").insert({
       data: {
         firstName,
         lastName,
@@ -59,25 +60,23 @@ function Registration({ SetisSuccessfull, referalId }) {
         username,
         country,
         university,
-        refby: referalId.current ? referalId.current : '',
       },
-    })
+    });
     if (err) {
-      console.log(err)
-      SetisLoading(false)
-      return
+      console.log(err);
+      SetisLoading(false);
+      return;
     }
-    referalId.current = res.key
-    SetisLoading(false)
-    SetisSuccessfull(true)
-  }
+    SetisLoading(false);
+    SetisSuccessful(true);
+  };
 
-  return (
+  return !isSuccessfull ? (
     <div className="py-16 flex justify-center " id="registration">
       <div className="max-w-4xl flex  flex-col md:flex-row rounded-lg overflow-hidden">
         <div
           className="w-full text-sm font-squidgame bg-[#04c8bb] text-black items-center flex flex-col space-y-2 p-8"
-          style={{ height: 'max-content' }}
+          style={{ height: "max-content" }}
         >
           <div className="text-2xl md:text-4xl ">ReGiStRaTiOn</div>
           <div className="font-montserrat text-sm text-center px-5 font-bold">
@@ -95,21 +94,21 @@ function Registration({ SetisSuccessfull, referalId }) {
                 SetformDetails((prev) => ({
                   ...prev,
                   firstName: e.target.value,
-                }))
+                }));
                 if (e.target.value.length < 3) {
                   Seterror((prev) => ({
                     ...prev,
-                    firstName: 'Atleast 3 Charachter',
-                  }))
-                } else if (error.firstName != '') {
+                    firstName: "Atleast 3 Charachter",
+                  }));
+                } else if (error.firstName != "") {
                   Seterror((prev) => ({
                     ...prev,
-                    firstName: '',
-                  }))
+                    firstName: "",
+                  }));
                 }
               }}
             />
-            {error.firstName !== '' && (
+            {error.firstName !== "" && (
               <div className="absolute right-2 top-3 group ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -136,21 +135,21 @@ function Registration({ SetisSuccessfull, referalId }) {
                 SetformDetails((prev) => ({
                   ...prev,
                   lastName: e.target.value,
-                }))
+                }));
                 if (e.target.value.length < 3) {
                   Seterror((prev) => ({
                     ...prev,
-                    lastName: 'Atleast 3 Charachter',
-                  }))
-                } else if (error.lastName != '') {
+                    lastName: "Atleast 3 Charachter",
+                  }));
+                } else if (error.lastName != "") {
                   Seterror((prev) => ({
                     ...prev,
-                    lastName: '',
-                  }))
+                    lastName: "",
+                  }));
                 }
               }}
             />
-            {error.lastName !== '' && (
+            {error.lastName !== "" && (
               <div className="absolute right-2 top-3 group ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -180,21 +179,21 @@ function Registration({ SetisSuccessfull, referalId }) {
                 SetformDetails((prev) => ({
                   ...prev,
                   username: e.target.value,
-                }))
+                }));
                 if (e.target.value.length < 3) {
                   Seterror((prev) => ({
                     ...prev,
-                    username: 'Atleast 3 Charachter',
-                  }))
-                } else if (error.username != '') {
+                    username: "Atleast 3 Charachter",
+                  }));
+                } else if (error.username != "") {
                   Seterror((prev) => ({
                     ...prev,
-                    username: '',
-                  }))
+                    username: "",
+                  }));
                 }
               }}
             />
-            {error.username !== '' && (
+            {error.username !== "" && (
               <div className="absolute right-2 top-3 group ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -221,23 +220,23 @@ function Registration({ SetisSuccessfull, referalId }) {
                 SetformDetails((prev) => ({
                   ...prev,
                   email: e.target.value,
-                }))
+                }));
                 const re =
-                  /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
+                  /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
                 if (!re.test(e.target.value)) {
                   Seterror((prev) => ({
                     ...prev,
-                    email: 'Not Valid',
-                  }))
-                } else if (error.email != '') {
+                    email: "Not Valid",
+                  }));
+                } else if (error.email != "") {
                   Seterror((prev) => ({
                     ...prev,
-                    email: '',
-                  }))
+                    email: "",
+                  }));
                 }
               }}
             />
-            {error.email !== '' && (
+            {error.email !== "" && (
               <div className="absolute right-2 top-3 group ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -264,17 +263,17 @@ function Registration({ SetisSuccessfull, referalId }) {
                 SetformDetails((prev) => ({
                   ...prev,
                   country: e.target.value,
-                }))
-                if (e.target.value === '') {
+                }));
+                if (e.target.value === "") {
                   Seterror((prev) => ({
                     ...prev,
-                    country: 'Select One',
-                  }))
-                } else if (error.country != '') {
+                    country: "Select One",
+                  }));
+                } else if (error.country != "") {
                   Seterror((prev) => ({
                     ...prev,
-                    country: '',
-                  }))
+                    country: "",
+                  }));
                 }
               }}
             >
@@ -285,7 +284,7 @@ function Registration({ SetisSuccessfull, referalId }) {
                 </option>
               ))}
             </select>
-            {error.country !== '' && (
+            {error.country !== "" && (
               <div className="absolute right-2 top-3 group ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -328,21 +327,21 @@ function Registration({ SetisSuccessfull, referalId }) {
                 SetformDetails((prev) => ({
                   ...prev,
                   university: e.target.value,
-                }))
+                }));
                 if (e.target.value.length < 3) {
                   Seterror((prev) => ({
                     ...prev,
-                    university: 'Atleast 3 Charachter',
-                  }))
-                } else if (error.university != '') {
+                    university: "Atleast 3 Charachter",
+                  }));
+                } else if (error.university != "") {
                   Seterror((prev) => ({
                     ...prev,
-                    university: '',
-                  }))
+                    university: "",
+                  }));
                 }
               }}
             />
-            {error.university !== '' && (
+            {error.university !== "" && (
               <div className="absolute right-2 top-3 group ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -368,14 +367,22 @@ function Registration({ SetisSuccessfull, referalId }) {
               className="border-[2px] border-black w-[18rem] text-center rounded-full py-2 cursor-pointer hover:bg-pink-700 hover:text-white transition ease-in-out duration-150"
               onClick={handleSubmit}
             >
-              {' '}
+              {" "}
               SUBMIT
             </div>
           )}
         </div>
       </div>
     </div>
-  )
+  ) : (
+    <div className="py-16 flex items-center justify-center">
+      <div className="h-48 md:w-96 w-72 bg-[#04c8bb] rounded-lg flex flex-col items-center justify-center">
+        <div className="text-2xl font-montserrat font-semibold text-black">
+          Thank You!
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default Registration
+export default Registration;
