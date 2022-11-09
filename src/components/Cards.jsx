@@ -8,7 +8,31 @@ function Cards() {
     <div className="all-cards">
       <div className="card card-left">
         <h1 className="title">India #1</h1>
-        <h2 className="sub-title">Cho Sang-Woo</h2>
+        <div className="main-content">
+          <div className="user-image">
+            <img
+              className="user-image-content"
+              src="https://firebasestorage.googleapis.com/v0/b/infinity-2k20.appspot.com/o/codechef-logo-white.png?alt=media&token=5c96a744-410a-4c5b-9bcb-247c7f7f3f05"
+            />
+          </div>
+          <div className="user-details">
+            <h4 className="user-name">Kalash Gupta</h4>
+            <h5 className="user-organisation">IIT Bombay</h5>
+            <div className="icons">
+              <a href="https://www.codechef.com/users/kal013">
+                <FontAwesomeIcon icon={faCode} className=" " />
+              </a>
+              <a href="">
+                <FontAwesomeIcon icon={faGithub} className="" />
+              </a>
+
+              <a href="">
+                <FontAwesomeIcon icon={faLinkedin} className="" />
+              </a>
+            </div>
+            <div className="year">'21</div>
+          </div>
+        </div>
         <div className="main-content">
           <div className="user-image">
             <img
@@ -87,7 +111,31 @@ function Cards() {
       </div>
       <div className="card card-center">
         <h1 className="title">WORLD #1</h1>
-        <h2 className="sub-title">Seong Gi-hun</h2>
+        <div className="main-content">
+          <div className="user-image">
+            <img
+              className="user-image-content"
+              src="https://firebasestorage.googleapis.com/v0/b/infinity-2k20.appspot.com/o/codechef-logo-white.png?alt=media&token=5c96a744-410a-4c5b-9bcb-247c7f7f3f05"
+            />
+          </div>
+          <div className="user-details">
+            <h4 className="user-name">Gennady Korotkevich</h4>
+            <h5 className="user-organisation">ITMO University</h5>
+            <div className="icons">
+              <a href="https://www.codechef.com/users/gennady.korotkevich">
+                <FontAwesomeIcon icon={faCode} className=" " />
+              </a>
+              <a href="">
+                <FontAwesomeIcon icon={faGithub} className="" />
+              </a>
+
+              <a href="">
+                <FontAwesomeIcon icon={faLinkedin} className="" />
+              </a>
+            </div>
+            <div className="year">'21</div>
+          </div>
+        </div>
         <div className="main-content">
           <div className="user-image">
             <img
@@ -168,7 +216,31 @@ function Cards() {
       </div>
       <div className="card">
         <h1 className="title">IIIT Pune #1</h1>
-        <h2 className="sub-title">Kang Sae-Byeok</h2>
+        <div className="main-content">
+          <div className="user-image">
+            <img
+              className="user-image-content"
+              src="https://firebasestorage.googleapis.com/v0/b/infinity-2k20.appspot.com/o/codechef-logo-white.png?alt=media&token=5c96a744-410a-4c5b-9bcb-247c7f7f3f05"
+            />
+          </div>
+          <div className="user-details">
+            <h4 className="user-name">Gaurav</h4>
+            <h5 className="user-organisation">IIIT Pune</h5>
+            <div className="icons">
+              <a href="https://www.codechef.com/users/g0uravlathwal">
+                <FontAwesomeIcon icon={faCode} className=" " />
+              </a>
+              <a href="">
+                <FontAwesomeIcon icon={faGithub} className="" />
+              </a>
+
+              <a href="https://www.linkedin.com/in/g0uravlathwal/">
+                <FontAwesomeIcon icon={faLinkedin} className="" />
+              </a>
+            </div>
+            <div className="year">'21</div>
+          </div>
+        </div>
         <div className="main-content">
           <div className="user-image">
             <img
