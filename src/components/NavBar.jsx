@@ -6,7 +6,8 @@ import { scroller } from 'react-scroll'
 const navigation = [
   { name: 'HOME', href: '/', current: false },
   { name: 'TEAM', href: '/ourteam', current: false },
-  { name: 'EVENTS', href: '/events', current: false },
+  { name: 'PAST EVENTS', href: '/events', current: false },
+  { name: 'INFINITY 2k22', href: '/infinity', current: false },
   { name: 'HALL OF FAME', href: '/halloffame', current: false },
 ]
 function classNames(...classes) {

@@ -7,6 +7,7 @@ import homeImage from './assets/home-image.jpg'
 
 import './styles/tailwind.css'
 import { Route, Routes } from 'react-router-dom'
+import Home from './components/Home'
 
 const MainComponent = () => {
   return (
@@ -64,6 +65,7 @@ function App() {
         <Route path="/halloffame" element={<Fame />} />
         <Route path="/ourteam" element={<Team />} />
         <Route path="/" element={<MainComponent />} />
+        <Route path="/infinity" element={<Home />} />
       </Routes>
     </div>
   )

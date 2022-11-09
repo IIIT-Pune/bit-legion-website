@@ -23,7 +23,7 @@
   padding-bottom: 2rem;
 }
 .top-nav {
-  height: calc(64px * 2);
+  height: 64px;
 }
 @tailwind base;
 @tailwind components;
