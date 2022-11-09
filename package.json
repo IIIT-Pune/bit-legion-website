@@ -15,6 +15,7 @@
 		"@fortawesome/react-fontawesome": "^0.1.16",
 		"@headlessui/react": "^1.4.2",
 		"@heroicons/react": "^1.0.5",
+		"@supabase/supabase-js": "^2.0.5",
 		"axios": "^0.24.0",
 		"email-validator": "^2.0.4",
 		"firebase": "^9.6.1",
