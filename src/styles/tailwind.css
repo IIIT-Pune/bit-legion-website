@@ -1,10 +1,30 @@
 /* ./your-css-folder/styles.css */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 @font-face {
-	font-family: "Squid-game";
-	src: url("../assets/GameOfSquids-1GMVL.ttf") format("truetype");
+  font-family: 'Squid-game';
+  src: url('../assets/GameOfSquids-1GMVL.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Aquire';
+  src: url('../assets/Aquire-BW0ox.otf') format('opentype');
+}
+.company-text-logo {
+  display: flex;
+  white-space: nowrap;
+}
+.bit-legion-text {
+  font-family: 'Special Elite', cursive;
+  font-size: 32px;
+  margin: 0 0.5rem;
+}
+.root {
+  min-height: 100vh;
+  padding-bottom: 2rem;
+}
+.top-nav {
+  height: calc(64px * 2);
 }
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-

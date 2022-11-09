@@ -30,7 +30,7 @@
   color: white;
 }
 .header-team {
-  color: #bf4a70;
+  color: #66fcf1;
 }
 
 .team-a {
@@ -62,14 +62,15 @@
   gap: 0.7rem;
   border-radius: 1rem;
   box-shadow: 0px 1px, 1px 0px, 1px 1px;
+  width: 280px;
 }
 
 .person-box-native {
-  background-color: #bf4a70;
+  background-color: #66fcf1;
 }
 
 .person-box-white {
-  background-color: #f9e7e8;
+  background-color: #c5c6c8;
 }
 
 .icons {
@@ -99,7 +100,7 @@
 }
 
 .person-name-native {
-  color: #bf4a70;
+  color: #010101;
 }
 
 .person-name-black {
@@ -114,7 +115,7 @@
 }
 
 .person-work-white {
-  color: rgb(235, 235, 235);
+  color: #010101;
 }
 
 .person-work-black {
