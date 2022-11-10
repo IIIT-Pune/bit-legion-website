@@ -17,7 +17,7 @@ function Cards() {
           </div>
           <div className="user-details">
             <h4 className="user-name">Kalash Gupta</h4>
-            <h5 className="user-organisation">IIT Bombay</h5>
+            <h5 className="user-organisation">IIT Delhi</h5>
             <div className="icons">
               <a href="https://www.codechef.com/users/kal013">
                 <FontAwesomeIcon icon={faCode} className=" " />
@@ -224,10 +224,10 @@ function Cards() {
             />
           </div>
           <div className="user-details">
-            <h4 className="user-name">Gaurav</h4>
+            <h4 className="user-name">Apoorv Kumar</h4>
             <h5 className="user-organisation">IIIT Pune</h5>
             <div className="icons">
-              <a href="https://www.codechef.com/users/g0uravlathwal">
+              <a href="https://www.codechef.com/users/apoorv_me">
                 <FontAwesomeIcon icon={faCode} className=" " />
               </a>
               <a href="">
