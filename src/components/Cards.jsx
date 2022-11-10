@@ -233,8 +233,7 @@ function Cards() {
               <a href="">
                 <FontAwesomeIcon icon={faGithub} className="" />
               </a>
-
-              <a href="https://www.linkedin.com/in/g0uravlathwal/">
+              <a href="https://www.linkedin.com/in/apoorv-kumar-359555202/">
                 <FontAwesomeIcon icon={faLinkedin} className="" />
               </a>
             </div>
