@@ -2,7 +2,6 @@ import Fame from "./components/Fame";
 import NavBar from "./components/NavBar";
 import Archive from "./components/Archive";
 import Team from "./components/Team";
-import { BsInstagram, BsLinkedin, BsTwitter } from "react-icons/bs";
 import "./App.css";
 import homeImage from "./assets/home-image.jpg";
 
@@ -10,6 +9,7 @@ import "./styles/tailwind.css";
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import Events from "./components/Events";
+import SocialLinks from "./components/SocialLinks";
 
 const MainComponent = () => {
   return (
@@ -54,35 +54,7 @@ const MainComponent = () => {
         ICPC Amritapuri regionals.
       </div>
       <Team />
-      <div className="flex flex-row justify-center items-center">
-        <div className="text-pink-squid text-xl px-2 font-medium">
-          Find us on:{" "}
-        </div>
-        <button
-          className="px-3"
-          onClick={() => {
-            window.open("https://www.instagram.com/bit.iiitp", "_blank");
-          }}
-        >
-          <BsInstagram className="text-pink-squid" size={30} />
-        </button>
-        <button
-          className="px-3`"
-          onClick={() => {
-            window.open("https://twitter.com/bit_iiitp", "_blank");
-          }}
-        >
-          <BsTwitter className="text-pink-squid" size={30} />
-        </button>
-        <button
-          className="px-3"
-          onClick={() => {
-            window.open("https://www.linkedin.com/company/bitlegion", "_blank");
-          }}
-        >
-          <BsLinkedin className="text-pink-squid" size={30} />
-        </button>
-      </div>
+      <SocialLinks />
     </div>
   );
 };
