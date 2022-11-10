@@ -80,17 +80,17 @@ function NavBar() {
                       </Link>
                     ))}
                   </div>
-                  <div
-                    className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
-                    style={{ marginLeft: "auto" }}
-                  >
-                    <div
-                      onClick={onRegisterNow}
-                      className="bg-pink-squid select-none text-[#202833] font-montserrat font-semibold rounded-lg cursor-pointer focus:outline-none p-2"
-                    >
-                      REGISTER NOW
-                    </div>
-                  </div>
+                </div>
+              </div>
+              <div
+                className="hidden absolute inset-y-0 right-0 sm:flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+                style={{ marginLeft: "auto" }}
+              >
+                <div
+                  onClick={onRegisterNow}
+                  className="bg-pink-squid select-none text-[#202833] font-montserrat font-semibold rounded-lg cursor-pointer focus:outline-none p-2"
+                >
+                  REGISTER NOW
                 </div>
               </div>
             </div>
