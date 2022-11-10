@@ -1,34 +1,35 @@
-import Fame from './components/Fame'
-import NavBar from './components/NavBar'
-import Archive from './components/Archive'
-import Team from './components/Team'
-import './App.css'
-import homeImage from './assets/home-image.jpg'
+import Fame from "./components/Fame";
+import NavBar from "./components/NavBar";
+import Archive from "./components/Archive";
+import Team from "./components/Team";
+import "./App.css";
+import homeImage from "./assets/home-image.jpg";
 
-import './styles/tailwind.css'
-import { Route, Routes } from 'react-router-dom'
-import Home from './components/Home'
+import "./styles/tailwind.css";
+import { Route, Routes } from "react-router-dom";
+import Home from "./components/Home";
+import Events from "./components/Events";
 
 const MainComponent = () => {
   return (
     <div className="bit-legion-wrapper">
       <div
         className="bit-legion-text text-white text-center"
-        style={{ width: '70%', margin: 'auto' }}
+        style={{ width: "70%", margin: "auto" }}
       >
         There are only 10 types of people in the world: those who understand
         binary and those who don't.
       </div>
-      <img src={homeImage} alt="" style={{ width: '80%', margin: 'auto' }} />
+      <img src={homeImage} alt="" style={{ width: "80%", margin: "auto" }} />
       <h1
         className="font-Aquire text-pink-squid"
-        style={{ fontSize: '3rem', textAlign: 'center' }}
+        style={{ fontSize: "3rem", textAlign: "center" }}
       >
         ABOUT US
       </h1>
       <div
         className="text-white font-montserrat text-[18px]"
-        style={{ width: '90%', margin: '0 auto' }}
+        style={{ width: "90%", margin: "0 auto" }}
       >
         BiT Legion is the elite coding club of IIIT Pune. It is a student-driven
         community of like-minded people striving to reach new heights in the
@@ -53,22 +54,23 @@ const MainComponent = () => {
       </div>
       <Team />
     </div>
-  )
-}
+  );
+};
 
 function App() {
   return (
     <div className="root">
       <NavBar />
       <Routes>
+        <Route path="/" element={<MainComponent />} />
         <Route path="/archives" element={<Archive />} />
         <Route path="/halloffame" element={<Fame />} />
         <Route path="/ourteam" element={<Team />} />
-        <Route path="/" element={<MainComponent />} />
         <Route path="/infinity" element={<Home />} />
+        <Route path="/events" element={<Events />} />
       </Routes>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
