@@ -30,7 +30,12 @@ function NavBar() {
   return (
     <Disclosure as="nav" className="top-nav">
       {({ open }) => (
-        <div className="bg-black fixed w-full z-50 top-0 ">
+        <div
+          className="fixed w-full z-50 top-0 backdrop-blur-md"
+          styles={{
+            backdropFilter: "blur(10px)",
+          }}
+        >
           <div className=" mx-auto px-2   ">
             <div
               className="relative flex items-center justify-start sm:justify-around h-16"
