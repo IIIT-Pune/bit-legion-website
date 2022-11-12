@@ -7,9 +7,10 @@ import homeImage from "./assets/home-image.jpg";
 
 import "./styles/tailwind.css";
 import { Route, Routes } from "react-router-dom";
-import Home from "./components/Home";
+import Infinity from "./components/Infinity";
 import Events from "./components/Events";
 import SocialLinks from "./components/SocialLinks";
+import BitLegionTeam from "./data/BitLegionTeam";
 
 const MainComponent = () => {
   return (
@@ -53,7 +54,7 @@ const MainComponent = () => {
         BiT Legion members recently bagged Rank 37 (best among all IIITs) at
         ICPC Amritapuri regionals.
       </div>
-      <Team />
+      <Team teamMembers={BitLegionTeam} />
       <SocialLinks />
     </div>
   );
@@ -67,8 +68,8 @@ function App() {
         <Route path="/" element={<MainComponent />} />
         <Route path="/archives" element={<Archive />} />
         <Route path="/halloffame" element={<Fame />} />
-        <Route path="/ourteam" element={<Team />} />
-        <Route path="/infinity" element={<Home />} />
+        <Route path="/ourteam" element={<Team teamMembers={BitLegionTeam} />} />
+        <Route path="/infinity" element={<Infinity />} />
         <Route path="/events" element={<Events />} />
       </Routes>
     </div>

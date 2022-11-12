@@ -1,21 +1,21 @@
-import './Team.css'
-import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa'
-import TeamMembers from '../data/TeamMembers'
-import { motion } from 'framer-motion'
+import "./Team.css";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 function MemberBox(props) {
+  const splitName = props.data.name.toUpperCase().split(" ");
   return (
     <motion.div
       initial={{ rotate: 180, scale: 0 }}
       animate={{ rotate: 0, scale: 1 }}
       transition={{
-        type: 'spring',
+        type: "spring",
         stiffness: 260,
         damping: 20,
         duration: 0.5,
       }}
       className={
-        'person-box ' + (props.val ? 'person-box-native' : 'person-box-white')
+        "person-box " + (props.val ? "person-box-native" : "person-box-white")
       }
     >
       <div className="icons">
@@ -31,39 +31,45 @@ function MemberBox(props) {
       </div>
       <div
         className={
-          'person-name ' +
-          (props.val ? 'person-name-black' : 'person-name-native')
+          "person-name " +
+          (props.val ? "person-name-black" : "person-name-native")
         }
       >
-        <div>{props.data.name.toUpperCase().split(' ')[0]}&nbsp;</div>
-        <div>{props.data.name.toUpperCase().split(' ')[1]}</div>
+        {splitName.map((name, idx) => {
+          console.log(name);
+          return splitName.length - 1 != idx ? (
+            <div>{name}&nbsp;</div>
+          ) : (
+            <div>{name}</div>
+          );
+        })}
       </div>
       <div
         className={
-          'person-work ' +
-          (props.val ? 'person-work-white' : 'person-work-black')
+          "person-work " +
+          (props.val ? "person-work-white" : "person-work-black")
         }
       >
         {props.data.work}
       </div>
     </motion.div>
-  )
+  );
 }
 
-function Team() {
+function Team({ teamMembers }) {
   return (
     <div className="team-section mx-auto">
       <div className="header flex justify-center">
-        <span className="text-pink-squid font-Aquire">OUR</span>{' '}
+        <span className="text-pink-squid font-Aquire">OUR</span>{" "}
         <span className="text-pink-squid font-Aquire">TEAM</span>
       </div>
       <div className="grid">
-        {TeamMembers.map((member, index) => {
-          return <MemberBox key={index} val={index % 2} data={member} /> //val is for alternating colors
+        {teamMembers.map((member, index) => {
+          return <MemberBox key={index} val={index % 2} data={member} />; //val is for alternating colors
         })}
       </div>
     </div>
-  )
+  );
 }
 
-export default Team
+export default Team;

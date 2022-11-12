@@ -4,6 +4,7 @@ import Countdown from "react-countdown";
 import infinityText from "../assets/infinity-text.svg";
 import Registration from "./Registration";
 import Team from "./Team";
+import InfinityTeam from "../data/InfinityTeam";
 function Home() {
   const renderer = ({ days, hours, minutes, seconds, completed }) => {
     if (completed) {
@@ -129,7 +130,7 @@ function Home() {
         experts. Anyone having a knack for coding is encouraged to participate.
       </div>
       <Registration />
-      <Team />
+      <Team teamMembers={InfinityTeam} />
     </div>
   );
 }
