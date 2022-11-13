@@ -65,11 +65,11 @@ function App() {
     <div className="root">
       <NavBar />
       <Routes>
-        <Route path="/" element={<MainComponent />} />
+        <Route path="/bit-legion" element={<MainComponent />} />
         <Route path="/archives" element={<Archive />} />
         <Route path="/halloffame" element={<Fame />} />
         <Route path="/ourteam" element={<Team teamMembers={BitLegionTeam} />} />
-        <Route path="/infinity" element={<Infinity />} />
+        <Route path="/" element={<Infinity />} />
         <Route path="/events" element={<Events />} />
       </Routes>
     </div>

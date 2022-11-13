@@ -4,10 +4,10 @@ import LogoNav from "../assets/logo.svg";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { scroller } from "react-scroll";
 const navigation = [
-  { name: "HOME", href: "/", current: false },
+  { name: "BIT LEGION", href: "/bit-legion", current: false },
   { name: "TEAM", href: "/ourteam", current: false },
   { name: "PAST EVENTS", href: "/events", current: false },
-  { name: "INFINITY 2k22", href: "/infinity", current: false },
+  { name: "INFINITY 2k22", href: "/", current: false },
   { name: "HALL OF FAME", href: "/halloffame", current: false },
 ];
 function classNames(...classes) {
@@ -17,8 +17,8 @@ function NavBar() {
   const { pathname } = useLocation();
   let navigate = useNavigate();
   const onRegisterNow = () => {
-    if (pathname !== "/infinity") {
-      navigate("/infinity");
+    if (pathname !== "/") {
+      navigate("/");
     } else {
       scroller.scrollTo("registration", {
         duration: 1000,
