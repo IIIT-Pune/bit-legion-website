@@ -4,10 +4,10 @@ import LogoNav from "../assets/logo.svg";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { scroller } from "react-scroll";
 const navigation = [
+  { name: "INFINITY 2k22", href: "/", current: false },
   { name: "BIT LEGION", href: "/bit-legion", current: false },
   { name: "TEAM", href: "/ourteam", current: false },
   { name: "PAST EVENTS", href: "/events", current: false },
-  { name: "INFINITY 2k22", href: "/", current: false },
   { name: "HALL OF FAME", href: "/halloffame", current: false },
 ];
 function classNames(...classes) {
