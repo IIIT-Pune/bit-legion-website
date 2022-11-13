@@ -39,7 +39,7 @@ const TeamMembers = [
     work: "Core Member",
     github: "#",
     linkedin: "https://www.linkedin.com/in/ashu-mittal-7081a6232/",
-    instagram: "https://www.instagram.com/_.0202_.ashu",
+    instagram: "https://www.instagram.com/_.0202._ashu",
   },
   {
     name: "Amaan Parvez",

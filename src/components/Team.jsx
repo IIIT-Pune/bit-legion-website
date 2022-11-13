@@ -36,7 +36,6 @@ function MemberBox(props) {
         }
       >
         {splitName.map((name, idx) => {
-          console.log(name);
           return splitName.length - 1 != idx ? (
             <div>{name}&nbsp;</div>
           ) : (

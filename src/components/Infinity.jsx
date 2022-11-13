@@ -99,7 +99,7 @@ function Home() {
       </div>
       <div className="font-montserrat font-bold tracking-widest antialiased w-full text-center text-xl mt-20 md:mt-4">
         HOSTED ON{" "}
-        <span className="text-pink-squid font-extrabold">CODECHEF</span>
+        <span className="text-pink-squid font-extrabold">CODECHEF (WITH <span className="text-[#a896ea]">STARTERS 65</span>)</span>
       </div>
       <div className="font-montserrat font-medium tracking-wide antialiased w-full text-xl mt-5 md:mt-2 flex flex-row  items-center justify-center">
         <CalendarIcon className="text-pink-squid h-6 w-6 mr-1" />
