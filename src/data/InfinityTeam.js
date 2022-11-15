@@ -7,13 +7,6 @@ const TeamMembers = [
     instagram: "#",
   },
   {
-    name: "Sahil Tiwari",
-    work: "Problem Setter",
-    github: "#",
-    linkedin: "https://www.linkedin.com/in/tiwarisahil585",
-    instagram: "https://www.instagram.com/tiwarisahil585/",
-  },
-  {
     name: "Reyaan Jagnani",
     work: "Problem Setter",
     github: "https://github.com/reyaan44",
