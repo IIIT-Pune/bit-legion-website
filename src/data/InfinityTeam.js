@@ -1,12 +1,5 @@
 const TeamMembers = [
   {
-    name: "Apoorv Kumar",
-    work: "Problem Setter",
-    github: "#",
-    linkedin: "https://www.linkedin.com/in/apoorv-kumar-359555202/",
-    instagram: "#",
-  },
-  {
     name: "Reyaan Jagnani",
     work: "Problem Setter",
     github: "https://github.com/reyaan44",
